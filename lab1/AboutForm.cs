@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace lab1
 {
-    public partial class Form1 : Form
+    public partial class AboutForm : Form
     {
-        public Form1()
+        public AboutForm()
         {
             InitializeComponent();
+        }
+
+        private void AboutForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
