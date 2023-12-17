@@ -41,9 +41,10 @@
             this.label1.BackColor = System.Drawing.Color.DarkGreen;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.GreenYellow;
-            this.label1.Location = new System.Drawing.Point(75, 48);
+            this.label1.Location = new System.Drawing.Point(100, 59);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 17);
+            this.label1.Size = new System.Drawing.Size(237, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Лабораторна робота №1";
             // 
@@ -53,9 +54,10 @@
             this.label2.BackColor = System.Drawing.Color.DarkGreen;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.GreenYellow;
-            this.label2.Location = new System.Drawing.Point(75, 92);
+            this.label2.Location = new System.Drawing.Point(101, 79);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 15);
+            this.label2.Size = new System.Drawing.Size(236, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "виконала студентка групи ІП-з11";
             // 
@@ -65,17 +67,19 @@
             this.label3.BackColor = System.Drawing.Color.DarkGreen;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.GreenYellow;
-            this.label3.Location = new System.Drawing.Point(95, 140);
+            this.label3.Location = new System.Drawing.Point(118, 97);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 17);
+            this.label3.Size = new System.Drawing.Size(197, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Трущак Ольга Ігорівна";
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(138, 193);
+            this.ExitButton.Location = new System.Drawing.Point(176, 248);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(4);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(75, 23);
+            this.ExitButton.Size = new System.Drawing.Size(100, 28);
             this.ExitButton.TabIndex = 3;
             this.ExitButton.Text = "Вийти";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -83,19 +87,20 @@
             // 
             // AboutForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
-            this.ClientSize = new System.Drawing.Size(349, 250);
+            this.ClientSize = new System.Drawing.Size(465, 308);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AboutForm";
             this.Text = "AboutForm";
             this.Load += new System.EventHandler(this.AboutForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.AboutForm_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -17,8 +17,8 @@ namespace lab4
         bool movingUp2 = true;
         bool movingUp3 = false;
         bool isAutomatic;
-        int x = 2;
-        int y = 2;
+        int x = 5;
+        int y = 5;
         int x1 = 10;
         int y1 = 10;
         Image im1 = Image.FromFile("sprite5.png");
