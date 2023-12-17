@@ -17,6 +17,9 @@ namespace lab2
         Bitmap mypic1;
         Bitmap mypic2;
 
+        int squares;
+        int triangles;
+
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +27,12 @@ namespace lab2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int n = 50;
+            if (int.TryParse(textBox1.Text, out squares))
+            {
+                n = squares;
+            }
+
             int x1 = 20;
             int y1 = 20;
             int x2 = 200;
@@ -45,7 +54,7 @@ namespace lab2
 
             float p = 0.08f;
 
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < n; i++)
             {
                 float x1new = x1 + (x2 - x1) * p;
                 float y1new = y1 + (y2 - y1) * p;
@@ -77,6 +86,12 @@ namespace lab2
 
         private void button2_Click(object sender, EventArgs e)
         {
+            int m = 5;
+            if (int.TryParse(textBox2.Text, out triangles))
+            {
+                m = triangles;
+            }
+
             Pen mypen2 = new Pen(Color.Crimson, 1);
 
             int x1 = 20;
@@ -97,7 +112,7 @@ namespace lab2
 
             float p = 0.5f;
 
-            DrawTriangles(x1, y1, x2, y2, x3, y3, mypen2, 5, p);
+            DrawTriangles(x1, y1, x2, y2, x3, y3, mypen2, m, p);
 
         }
 
