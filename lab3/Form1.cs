@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace lab3
 {
@@ -16,6 +17,7 @@ namespace lab3
         Graphics g;
 
         Bitmap mypic1;
+        int d;
 
         public Form1()
         {
@@ -25,6 +27,11 @@ namespace lab3
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(textBox1.Text, out d))
+            {
+                d = 3;
+            }
+
             Pen mypen1 = new Pen(Color.DarkOliveGreen, 1);
 
             Point t1 = new Point(100, 310);
@@ -37,7 +44,7 @@ namespace lab3
 
             LinkedList<Point> list = new LinkedList<Point>();
             Point center = new Point(250, 223);
-            list = CountPoints(t1, t2, t3, 3, center);
+            list = CountPoints(t1, t2, t3, d, center);
             Point[] points = list.ToArray();
             g.DrawPolygon(mypen1, points);
 
@@ -181,6 +188,11 @@ namespace lab3
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(textBox1.Text, out d))
+            {
+                d = 3;
+            }
+
             Pen mypen2 = new Pen(Color.MediumPurple, 1);
             //Brush eraser = new SolidBrush(Color.AntiqueWhite);
 
@@ -191,7 +203,6 @@ namespace lab3
             mypic1 = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             pictureBox1.Image = mypic1;
             g = Graphics.FromImage(mypic1);
-            int d = 3;
 
             g.DrawPolygon(mypen2, new Point[] { t1, t2, t3 });
             DrawSnowflake(t1, t2, t3, mypen2, d);
@@ -205,6 +216,11 @@ namespace lab3
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(textBox1.Text, out d))
+            {
+                d = 3;
+            }
+
             Pen mypen2 = new Pen(Color.DarkCyan, 1);
             Brush eraser = new SolidBrush(Color.AntiqueWhite);
 
@@ -215,7 +231,6 @@ namespace lab3
             mypic1 = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             pictureBox1.Image = mypic1;
             g = Graphics.FromImage(mypic1);
-            int d = 3;
 
             Kochflake(g, d, t1, t2);
             Kochflake(g, d, t2, t3);
@@ -243,7 +258,6 @@ namespace lab3
 
                 Kochflake(g, depth - 1, t4, tv);
                 Kochflake(g, depth - 1, tv, t5);
-                
                 Kochflake(g, depth - 1, t5, t2);
             }
             else
