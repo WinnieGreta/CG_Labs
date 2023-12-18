@@ -150,15 +150,13 @@ namespace lab4
         {
             if(!isAutomatic)
             {
-                Point p1 = MousePosition;
-                //int X = Cursor.Position.X;
-                //int Y = Cursor.Position.Y;
-                //var p1 = this.PointToClient(new Point(X, Y));
+                Point p1 = this.PointToClient(Cursor.Position);
+
                 if (p1.X - puff.Location.X - puff.Width / 2 >= 0 && !(puff.Bounds.IntersectsWith(star1.Bounds) || puff.Bounds.IntersectsWith(star2.Bounds) || puff.Bounds.IntersectsWith(star3.Bounds)))
                 {
                     puff.Left += Math.Abs(x1);
                 }
-                else if(puff.Location.X - p1.X - puff.Width / 2 >= 0 && !(puff.Bounds.IntersectsWith(star1.Bounds) || puff.Bounds.IntersectsWith(star2.Bounds) || puff.Bounds.IntersectsWith(star3.Bounds)))
+                else if(puff.Location.X - p1.X + puff.Width / 2 >= 0 && !(puff.Bounds.IntersectsWith(star1.Bounds) || puff.Bounds.IntersectsWith(star2.Bounds) || puff.Bounds.IntersectsWith(star3.Bounds)))
                 {
                     puff.Left -= Math.Abs(x1);
                 }
